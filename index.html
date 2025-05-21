@@ -21,7 +21,6 @@
   </style>
 </head>
 
-
 <body>
   <h2>Editable Post Generator</h2>
   <button onclick="generatePost()">Generate Post</button>
@@ -31,24 +30,19 @@
   <button onclick="downloadText()">Download Text</button>
   <button onclick="downloadImage()">Download Image</button>
 
-
   <script>
     const postsData = [
       {
-        text: `□ 1: The Side Hustle That's Funding My Early Retirement Plans
-
+        text: `□ 1A: The Side Hustle That's Funding My Early Retirement Plans
 
 Who says you need to work until you're 65? Not me! I've found a business opportunity that's putting me on track to retire in my 40s instead of my 60s.
-
 
 ✅ Passive income streams
 ✅ Minimal startup costs
 ✅ Complete mentorship program
 ✅ Works alongside your day job
 
-
 I'm building my freedom fund every single day, even while I sleep! □
-
 
 □ Curious about how to escape the rat race early? Drop me a message!`,
         image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/retire-early_017_nzq4x4.png"
@@ -56,18 +50,14 @@ I'm building my freedom fund every single day, even while I sleep! □
       {
         text: `✈️ 2: The Side Hustle That’s Sending Me on Dream Holidays
 
-
 Imagine taking more holidays every year without worrying about money! I started a simple business that’s funding my next adventure.
-
 
 ✅ Flexible hours
 ✅ Affordable to start
 ✅ Step-by-step support
 ✅ Earn while you travel
 
-
 Ready to pack your bags more often? □
-
 
 ✈️ Message me to find out how you can join me on the beach!`,
         image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/extra-holiday-vacations_020_saxsb6.png"
@@ -75,18 +65,14 @@ Ready to pack your bags more often? □
  {
         text: `□ 3: The Side Hustle That's Funding My Early Retirement Plans
 
-
 Who says you need to work until you're 65? Not me! I've found a business opportunity that's putting me on track to retire in my 40s instead of my 60s.
-
 
 ✅ Passive income streams
 ✅ Minimal startup costs
 ✅ Complete mentorship program
 ✅ Works alongside your day job
 
-
 I'm building my freedom fund every single day, even while I sleep! □
-
 
 □ Curious about how to escape the rat race early? Drop me a message!`,
         image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/retire-early_017_nzq4x4.png"
@@ -94,39 +80,30 @@ I'm building my freedom fund every single day, even while I sleep! □
  {
         text: `□ 4: The Side Hustle That's Funding My Early Retirement Plans
 
-
 Who says you need to work until you're 65? Not me! I've found a business opportunity that's putting me on track to retire in my 40s instead of my 60s.
-
 
 ✅ Passive income streams
 ✅ Minimal startup costs
 ✅ Complete mentorship program
 ✅ Works alongside your day job
 
-
 I'm building my freedom fund every single day, even while I sleep! □
-
 
 □ Curious about how to escape the rat race early? Drop me a message!`,
         image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/retire-early_017_nzq4x4.png"
       },
 
-
 {
         text: `✈️ 5: The Side Hustle That’s Sending Me on Dream Holidays
 
-
 Imagine taking more holidays every year without worrying about money! I started a simple business that’s funding my next adventure.
-
 
 ✅ Flexible hours
 ✅ Affordable to start
 ✅ Step-by-step support
 ✅ Earn while you travel
 
-
 Ready to pack your bags more often? □
-
 
 ✈️ Message me to find out how you can join me on the beach!`,
         image: "https://res.cloudinary.com/dc2r8z3h8/image/upload/extra-holiday-vacations_020_saxsb6.png"
@@ -134,14 +111,9 @@ Ready to pack your bags more often? □
 
 
 
-
-
-
     ];
 
-
     let currentIndex = 0;
-
 
     function generatePost() {
       const post = postsData[currentIndex];
@@ -149,7 +121,6 @@ Ready to pack your bags more often? □
       document.getElementById("postImage").src = post.image;
       currentIndex = (currentIndex + 1) % postsData.length;
     }
-
 
     function downloadText() {
       const text = document.getElementById("postText").innerText;
@@ -160,12 +131,10 @@ Ready to pack your bags more often? □
       link.click();
     }
 
-
     function downloadImage() {
       const img = document.getElementById("postImage");
       const imageURL = img.src;
       const fileName = imageURL.substring(imageURL.lastIndexOf("/") + 1) || "image.png";
-
 
       fetch(imageURL, { mode: "cors" })
         .then(response => {
@@ -187,3 +156,5 @@ Ready to pack your bags more often? □
   </script>
 </body>
 </html>
+
+
